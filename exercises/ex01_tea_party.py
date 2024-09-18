@@ -20,7 +20,8 @@ def main_planner(guests: int) -> None:
         + str(
             cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests))
         )
-    )
+    )  # /n makes line breaks
+    # Convert everything to proper time value!
 
 
 def tea_bags(people: int) -> int:
@@ -30,10 +31,20 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """How many treats to get"""
-    return int((tea_bags(people=people)) * 1.5)
+    return int(
+        (tea_bags(people=people)) * 1.5
+    )  # make sure to conver to return value (int)
 
 
-def cost(tea_count: int, treat_count: int) -> float:
+# remember how to do math ;)
+# Variables can = themselves
+
+
+def cost(
+    tea_count: int, treat_count: int
+) -> (
+    float
+):  # sometimes trailblazer and/or VS studios has to be restarted for code to work
     """Cost of tea party"""
     return tea_count * 0.50 + treat_count * 0.75
 
