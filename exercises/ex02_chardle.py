@@ -1,18 +1,19 @@
 """Wordle but the computer tells us where the letter is"""
 
-___author___: str = "730735560"
+__author__: str = "730735560"
 
 
 def main() -> None:
     """Runs the code"""
-    contains_char(word=input_word(), letter=input_letter())
+    contains_char(word=(input_word()), letter=(input_letter()))
 
 
 def input_word() -> str:
     """Asks user for a five-character word"""
     word_choice: str = input("Enter a 5-character word:")
     if len(word_choice) != 5:
-        # I put this first because I felt like this wouldn't change but the else statement would a lot
+        # I put this first because I felt like this wouldn't change but the else #
+        # statement would a lot
         print("Error: Word must contain 5 characters.")
         exit()
     else:  # this  checks that the word length is 5
@@ -25,7 +26,8 @@ def input_letter() -> str:  # same thing as input_word()
     character: str = input("Enter a single character:")
     if len(character) != 1:
         print("Error: Character must be a single character.")
-        exit()  # I put this here because it happens after error prints, but only if the condition is met, so won't interfere with the rest of the program
+        exit()  # I put this here because it happens after error prints, but only if
+        # the condition is met, so won't interfere with the rest of the program
     else:
         print("'" + character + "'")
     return character
@@ -50,9 +52,8 @@ def contains_char(word: str, letter: str) -> None:
     if (
         letter == word[4]
     ):  # This was tricky. i originally but elif for everything which didn't work
-        print(
-            letter + " found at index 4"
-        )  # if also shouldn't have an else because then it messes it up
+        print(letter + " found at index 4")
+        # if also shouldn't have an else because then it messes it up
         count += 1
     if count >= 1:
         print(str(count) + " instances of " + letter + " found in " + word)
