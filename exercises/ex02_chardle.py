@@ -35,7 +35,7 @@ def input_letter() -> str:  # same thing as input_word()
 
 def contains_char(word: str, letter: str) -> None:
     """Tells how many occurrences of letter in word"""
-    print("Looking for " + letter + " in " + word)
+    print("Searching for " + letter + " in " + word)
     count: int = 0
     if letter == word[0]:
         print(letter + " found at index 0")
@@ -49,9 +49,8 @@ def contains_char(word: str, letter: str) -> None:
     if letter == word[3]:
         print(letter + " found at index 3")
         count += 1
-    if (
-        letter == word[4]
-    ):  # This was tricky. i originally but elif for everything which didn't work
+    if letter == word[4]:
+        # This was tricky. i originally but elif for everything which didn't work
         print(letter + " found at index 4")
         # if also shouldn't have an else because then it messes it up
         count += 1
@@ -59,6 +58,10 @@ def contains_char(word: str, letter: str) -> None:
         print(str(count) + " instances of " + letter + " found in " + word)
     if count == 0:
         print("No instances of " + letter + " found in " + word)
+    if count == 1:
+        print("1 instance of " + letter + " found in " + word)
+    if count > 1:
+        print(str(count) + " instances of " + letter + " found in " + word)
 
 
 if __name__ == "__main__":
