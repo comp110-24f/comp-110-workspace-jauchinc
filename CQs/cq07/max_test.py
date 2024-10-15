@@ -6,7 +6,7 @@ from CQs.cq07.find_max import find_and_remove_max
 
 list_test: list[int] = [1, 6, 8, 1, 8, 2, 8]
 list_test2: list[int] = [1, 10, 2, 10, 4, 10, 6]
-list_test2: list[int] = [1, 10, 2, 10, 4, 10, 6]
+list_test3: list[int] = []
 # These are to test the
 
 
